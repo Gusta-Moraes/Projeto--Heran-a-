@@ -1,0 +1,176 @@
+public class ProjetoFuncionarioHeranÃ§a {
+    public static int menu1(){
+      Scanner sc = new Scanner(System.in); 
+        int op;
+        
+        System.out.println("1. Realizar vendas");
+        System.out.println("2. Registrar horas extras");
+        System.out.println("3 . imprimir salario");
+        System.out.println("0. sair");
+        System.out.println("   Escolha uma opÃ§Ã£o -> ");
+        op = Sc.nextint();
+        return op;
+       
+    }
+public static int menu2(){
+   System.out.println("1. vendedor");
+        System.out.println("2. Administrativo");
+        System.out.println("   Escolha uma opÃ§Ã£o -> ");
+        op = Sc.nextint();
+        return op;
+        
+    
+    public static void main(String args) {
+        Scanner sc = new Scanner(System.in); 
+        Vendedor void = new Vendedor(); 
+        Administrativo adm = new  Administrativo();        
+        
+        System.out.println("vendedora");
+        System.out.println("Informe o nome do vendedor: ");
+        Vendedor.setNome(sc.nextLine());
+        System.out.println("Informe o RG do vendedor: ");
+        Vendedor.getRG(sc.nextLine());
+        System.out.println("informe o salario base:  ");
+        Vendedor.setSalario Base(sc.nextDouble());
+        System.out.println("Adiministrativo");
+        System.out.println("Informe o nome do administrativo: ");
+        adm.setNome(sc.nextLine());
+        System.out.println("Informe o RG do administrativo: ");
+        adm.setRG(sc.nextLine());
+        System.out.println("informe o salario fixo:  ");
+        adm.setSalarioFixo (sc.nextDouble());
+     do{
+         opção= menu 1();
+         switch (opcao){
+             case 1;
+             double venda;
+                 System.out.println("informe o valor da venda: ");
+                 venda =sc.nextDouble();
+                 break;
+             case 2:
+                 System.out.println("informe o nÃºmero de horas extras: ");
+                 adm.registrar Horas Extras(sc.nextint());
+                 break;
+                 
+             case 3:
+               int resp = menu2();
+               if (resp == 1){
+              Vendedor.imprimir();
+         }
+               else if (resp == 2) 
+                adm.imprimir();
+               else,System.out.println("OpÃ§Ã£o invalida");
+               break;
+               
+             case 0:System.out.println("Finalizando...");
+             break;
+                 default: System.out.println("OpÃ§Ã£o invalida");
+                 
+      
+     while(opcao != 0); 
+            
+        }
+   
+    }
+    
+}
+
+Administrativo
+public class Administrativo extends Funcionario{
+    private double salario fixo;
+    private int horas;
+
+    public double getSalariofixo() {
+        return salario fixo;
+    }
+
+    public void setSalario fixo(double salario fixo) {
+        this.salario fixo = salário fixo;
+    }
+
+    public int getHoras() {
+        return horas;
+    }
+
+    public void setHoras(int horas) {
+        this.horas = horas;
+    }
+    
+    public void registro Horas Extras(int valor){
+        horas = horas = valor;
+         
+    }
+    
+    @Override
+    public void imprimir(){
+        System.out.println("ADMINISTRATIVO");
+        super.imprimir();
+        System.out.println("salario a receber: " + 
+                salário fixo 0.01 * horas * salário fixo));
+        
+    }
+    }
+}
+
+Funcionário
+
+public class Funcionario {
+    private String nome;
+    private String rg;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getRg() {
+        return rg;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+    public void imprimir(){
+        System.out.println("Nome: " + nome);
+        System.out.println("RG: " + rg);
+    }
+    
+}
+
+Vendedor 
+public class Vendedor extends funcionario {
+    private double salarioBase;
+    private double vendas;
+
+    public double getSalarioBase() {
+        return salarioBase;
+    }
+
+    public void setSalarioBase(double salarioBase) {
+        this.salarioBase = salarioBase;
+    }
+
+    public double getVendas() {
+        return vendas;
+    }
+
+    public void setVendas(double vendas) {
+        this.vendas = vendas;
+    }
+    
+    public void acumularvendas(double valor0){
+        vendas = vendas + valor0
+        
+    }
+    
+    public void imprimir(){
+        System.out.println("VENDEDOR");
+        super.imprimir();
+        System.out.println("Salario a receber:  " + salarioBase 0.05 + vendas);
+        vendas = 0
+                
+        
+
